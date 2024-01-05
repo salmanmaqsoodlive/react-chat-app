@@ -19,7 +19,7 @@ import {
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { ThumbDownAltRounded, ThumbUpAltRounded } from "@mui/icons-material";
 
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = "http://ec2-54-237-221-234.compute-1.amazonaws.com:8000";
 
 const ChatArea = () => {
   const params = useParams();
@@ -34,7 +34,7 @@ const ChatArea = () => {
   const [recordedBlob, setRecordedBlob] = useState(null);
   const [parentId, setParentId] = useState(null);
   const webSocketService = new W3CWebSocket(
-    `ws://127.0.0.1:8000/ws/sc/?token=${encodeURIComponent(
+    `ws://54.237.221.234:8000/ws/sc/?token=${encodeURIComponent(
       token
     )}&receiver_id=${params.id}&parent_id=${parentId}`
   );

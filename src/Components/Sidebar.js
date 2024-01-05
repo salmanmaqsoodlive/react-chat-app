@@ -6,7 +6,7 @@ import Box from "@mui/material/Box";
 import UserItem from "./UserItem";
 
 const Sidebar = () => {
-  const BASE_URL = "http://localhost:8000";
+  const BASE_URL = "http://ec2-54-237-221-234.compute-1.amazonaws.com:8000";
   const [userList, setUserList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
