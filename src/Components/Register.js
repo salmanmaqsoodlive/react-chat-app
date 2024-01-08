@@ -1,9 +1,9 @@
 import { Button, TextField } from "@mui/material";
 import axios from "axios";
 import React, { useState } from "react";
+import { BASE_URL } from "../utils/globalVariables";
 
 function Register() {
-  const BASE_URL = "http://ec2-54-237-221-234.compute-1.amazonaws.com:8000";
   const [email, setEmail] = useState(null);
   const [firstname, setFirstname] = useState(null);
   const [lastname, setLastname] = useState(null);

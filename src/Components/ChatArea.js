@@ -18,8 +18,7 @@ import {
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { ThumbDownAltRounded, ThumbUpAltRounded } from "@mui/icons-material";
-
-const BASE_URL = "http://ec2-54-237-221-234.compute-1.amazonaws.com:8000";
+import { BASE_URL, IP } from "../utils/globalVariables";
 
 const ChatArea = () => {
   const params = useParams();
@@ -34,9 +33,9 @@ const ChatArea = () => {
   const [recordedBlob, setRecordedBlob] = useState(null);
   const [parentId, setParentId] = useState(null);
   const webSocketService = new W3CWebSocket(
-    `ws://54.237.221.234:8000/ws/sc/?token=${encodeURIComponent(
-      token
-    )}&receiver_id=${params.id}&parent_id=${parentId}`
+    `${IP}/?token=${encodeURIComponent(token)}&receiver_id=${
+      params.id
+    }&parent_id=${parentId}`
   );
 
   const [visibleIds, setVisibleIds] = useState([]);
@@ -89,7 +88,6 @@ const ChatArea = () => {
           },
         ]);
       }
-
     };
 
     return () => {

@@ -4,9 +4,9 @@ import axios from "axios";
 import { LinearProgress, List } from "@mui/material";
 import Box from "@mui/material/Box";
 import UserItem from "./UserItem";
+import { BASE_URL } from "../utils/globalVariables";
 
 const Sidebar = () => {
-  const BASE_URL = "http://ec2-54-237-221-234.compute-1.amazonaws.com:8000";
   const [userList, setUserList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
