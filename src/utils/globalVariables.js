@@ -1,2 +1,2 @@
-export const BASE_URL = "http://localhost:8000";
-export const IP = "ws://127.0.0.1:8000/ws/sc";
+export const BASE_URL = "http://ec2-34-228-70-78.compute-1.amazonaws.com:8000";
+export const IP = "ws:// 34.228.70.78:8000/ws/sc";
